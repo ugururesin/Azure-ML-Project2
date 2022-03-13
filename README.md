@@ -11,7 +11,7 @@
     * [5. Swagger Documentation](#swagger-documentation)
     * [6. Consume model endpoints](#consume-model-endpoints)
     * [7. Create and publish a pipeline](#create-and-publish-a-pipeline)
-    * [8. Documentation])(#documentation)
+    * [8. Documentation](#documentation)
 * [Screen Recording](#screen-recording)
 * [Future Improvements](#future-improvements)
 
