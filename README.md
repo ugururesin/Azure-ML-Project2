@@ -34,70 +34,100 @@ These are the steps we followed in this project :
 
 ## Key Steps  
 First the dataset is loaded
-
+**Figure-01**  
 ![fig](img/fig01.png)  
+**Figure-02**  
 ![fig](img/fig02.png)  
+**Figure-03**  
 ![fig](img/fig03.png)  
+**Figure-04**  
 ![fig](img/fig04.png)  
+**Figure-05**  
 ![fig](img/fig05.png)  
+**Figure-06**  
 ![fig](img/fig06.png)
 Then, a compute cluster is created  
+**Figure-07**  
 ![fig](img/fig07.png)  
 Using the dataset and the cluster, an AutoML experiment is setup  
+**Figure-08**  
 ![fig](img/fig08.png)  
 The task is selected as classification since the target label is a categorical variable ('yes', 'no')  
+**Figure-09**  
 ![fig](img/fig09.png)  
 The metric is set to AUC and Training hour is limited with 1 hour 
+**Figure-10**  
 ![fig](img/fig10.png)  
 The AutoML is started train different ML models to find out the best fitting algorithm  
+**Figure-11**  
 ![fig](img/fig11.png)  
 The AutoML completed its run less than an hour
+**Figure-12**  
 ![fig](img/fig12.png)  
 The best model metrics are 0.917 accuracy, 0.948 AUC_macro, 0.981 AUC_micro, 0.948 AUC_weighted  
+**Figure-13**  
 ![fig](img/fig13.png)  
 The precision-recall graph is shown below  
+**Figure-14**  
 ![fig](img/fig14.png)  
 The ROC curve is shown below  
+**Figure-15**  
 ![fig](img/fig15.png)  
 Then the model is deployed, the compute type is selected as ACI  
+**Figure-16**  
 ![fig](img/fig16.png)  
 Then the applications insights are enabled using 'service.update(enable_app_insights=True' (line14)  
+**Figure-17**  
 ![fig](img/fig17.png)  
 The model deployment is done succesfully  
+**Figure-18**  
 ![fig](img/fig18.png)
 Then the logs.py is run  
+**Figure-19**  
 ![fig](img/fig19.png)  
 The swagger.json file is downloaded and imported to the working directory  
+**Figure-20**  
 ![fig](img/fig20.png)
 Using Git Bash, the swagger.sh and the serve.py files are triggered respectively  
+**Figure-21**  
 ![fig](img/fig21.png)  
 Then the deployed model is accessed via swagger using localhost:8000/swagger.json adress
+**Figure-22**  
 ![fig](img/fig22.png)  
+**Figure-23**  
 ![fig](img/fig23.png)  
 Endpoint is consumed using the REST endpoint and the primary key  
+**Figure-24**  
 ![fig](img/fig24.png)  
 
 **endpoint.py script runs against the API producing JSON output from the model.**  
 The default script did not work, I changed it based on AzureML code snipsets.  
+**Figure-25**  
 ![fig](img/fig25.png)  
 
 As a second part of this project, the aml-pipelines-with-automated-machine-learning-step Jupyter Notebook is used to create a Pipeline.  
 Then, it's consumed and published the best model for the bank marketing dataset using AutoML with Python SDK.  
+**Figure-26**  
 ![fig](img/fig26.png)  
 
-**Note: There was a environment issue to save the best model, end no time left in the virtual environment to replicate the environment.**
+**Note: There was a environment issue to save the best model, end no time left in the virtual environment to replicate the environment again but met the rubric requirements**
 
 The pipeline runs and the endpoint is created successfully  
+**Figure-27**  
 ![fig](img/fig27.png)  
+**Figure-28**  
 ![fig](img/fig28.png)  
+**Figure-29**  
 ![fig](img/fig29.png) 
 And finally, the REST endpoint in Azure ML Studio, with a status of ACTIVE.
+**Figure-30**  
 ![fig](img/fig30.png) 
 
 
 ## Screen Recording with Subtitles
 [Youtube Link](https://www.youtube.com/watch?v=5iA5eBRqGTU)
 
+**P.S.** Due to the 5 minutes time limit, I accidentally skipped the endpoint consumption step in the video but can be seen in the figure25.
 
 ## Standout Suggestions
 * The data was imbalanced and this leads a biased model that yields biased predictions. The imbalance issue would be handled as one or more of the following techniques  
