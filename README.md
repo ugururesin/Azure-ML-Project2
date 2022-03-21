@@ -24,7 +24,7 @@ These are the steps we followed in this project :
 
 ![diagram](img/architecture.png)
 
-1. **Authentication** : In this step, we need to create a Security Principal (SP) to interact with the Azure Workspace.
+1. **Authentication** : In this step, we need to create a Security Principal (SP) to interact with the Azure Workspace. (Since I do not have permission to crate a SP in Udacity Lab, this step is skipped)
 2. **Automated ML Experiment** : In this step, we create an experiment using Automated ML, configure a compute cluster, and use that cluster to run the experiment.
 3. **Deploy the best model** : Deploying the Best Model will allow us to interact with the HTTP API service and interact with the model by sending data over POST requests.
 4. **Enable logging** : Logging helps monitor our deployed model. It helps us know the number of requests it gets, the time each request takes, etc.
@@ -33,5 +33,19 @@ These are the steps we followed in this project :
 7. **Create and publish a pipeline** : In this step, we automate this workflow by creating a pipeline with the Python SDK.
 
 ## Key Steps  
+First the dataset is loaded
 
-TBD
+![fig](img/fig01.png)  
+![fig](img/fig02.png)  
+![fig](img/fig03.png)  
+![fig](img/fig04.png)  
+![fig](img/fig05.png)  
+![fig](img/fig06.png)  
+![fig](img/fig07.png)  
+![fig](img/fig08.png)  
+![fig](img/fig09.png)  
+![fig](img/fig10.png)  
+![fig](img/fig11.png)  
+![fig](img/fig12.png)  
+![fig](img/fig13.png)  
+![fig](img/fig14.png)  
