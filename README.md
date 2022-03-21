@@ -76,6 +76,9 @@ Then the deployed model is accessed via swagger using localhost:8000/swagger.jso
 ![fig](img/fig23.png)  
 Endpoint is consumed using the REST endpoint and the primary key  
 ![fig](img/fig24.png)  
+
+**endpoint.py script runs against the API producing JSON output from the model.**  
+The default script did not work, I changed it based on AzureML code snipsets.  
 ![fig](img/fig25.png)  
 
 As a second part of this project, the aml-pipelines-with-automated-machine-learning-step Jupyter Notebook is used to create a Pipeline.  
