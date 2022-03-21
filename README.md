@@ -12,7 +12,7 @@
     * [6. Consume model endpoints](#consume-model-endpoints)
     * [7. Create and publish a pipeline](#create-and-publish-a-pipeline)
     * [8. Documentation](#documentation)
-* [Screen Recording](# Screen-Recording-with-Subtitles)
+* [Screen Recording](#Screen-Recording-with-Subtitles)
 * [Standout Suggestions](#Standout-Suggestions)
 
 ## Overview
