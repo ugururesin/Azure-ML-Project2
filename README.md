@@ -90,8 +90,9 @@ Finally, the pipeline runs and the endpoint is created successfully
 ![fig](img/fig29.png) 
 
 
-## Screen Recording
+## Screen Recording with Subtitles
 [Youtube Link](https://www.youtube.com/watch?v=5iA5eBRqGTU)
+
 
 ## Standout Suggestions
 * The data was imbalanced and this leads a biased model that yields biased predictions. The imbalance issue would be handled as one or more of the following techniques  
