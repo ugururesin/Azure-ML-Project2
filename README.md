@@ -40,12 +40,53 @@ First the dataset is loaded
 ![fig](img/fig03.png)  
 ![fig](img/fig04.png)  
 ![fig](img/fig05.png)  
-![fig](img/fig06.png)  
+![fig](img/fig06.png)
+Then, a compute cluster is created  
 ![fig](img/fig07.png)  
+Using the dataset and the cluster, an AutoML experiment is setup  
 ![fig](img/fig08.png)  
+The task is selected as classification since the target label is a categorical variable ('yes', 'no')  
 ![fig](img/fig09.png)  
+The metric is set to AUC and Training hour is limited with 1 hour 
 ![fig](img/fig10.png)  
+The AutoML is started train different ML models to find out the best fitting algorithm  
 ![fig](img/fig11.png)  
+The AutoML completed its run less than an hour
 ![fig](img/fig12.png)  
+The best model metrics are 0.917 accuracy, 0.948 AUC_macro, 0.981 AUC_micro, 0.948 AUC_weighted  
 ![fig](img/fig13.png)  
+The precision-recall graph is shown below  
 ![fig](img/fig14.png)  
+The ROC curve is shown below  
+![fig](img/fig15.png)  
+Then the model is deployed, the compute type is selected as ACI  
+![fig](img/fig16.png)  
+Then the applications insights are enabled using 'service.update(enable_app_insights=True' (line14)  
+![fig](img/fig17.png)  
+The model deployment is done succesfully  
+![fig](img/fig18.png)
+Then the logs.py is run  
+![fig](img/fig19.png)  
+The swagger.json file is downloaded and imported to the working directory  
+![fig](img/fig20.png)
+Using Git Bash, the swagger.sh and the serve.py files are triggered respectively  
+![fig](img/fig21.png)  
+Then the deployed model is accessed via swagger using localhost:8000/swagger.json adress
+![fig](img/fig22.png)  
+![fig](img/fig23.png)  
+Endpoint is consumed using the REST endpoint and the primary key  
+![fig](img/fig24.png)  
+![fig](img/fig25.png)  
+
+As a second part of this project, the aml-pipelines-with-automated-machine-learning-step Jupyter Notebook is used to create a Pipeline.  
+Then, it's consumed and published the best model for the bank marketing dataset using AutoML with Python SDK.  
+![fig](img/fig26.png)  
+
+**Note: There was a environment issue to save the best model, end no time left in the virtual environment to replicate the environment.**
+
+Finally, the pipeline runs and the endpoint is created successfully  
+![fig](img/fig27.png)  
+![fig](img/fig28.png)  
+![fig](img/fig29.png)  
+
+
