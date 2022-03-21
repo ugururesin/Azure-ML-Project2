@@ -87,6 +87,21 @@ Then, it's consumed and published the best model for the bank marketing dataset 
 Finally, the pipeline runs and the endpoint is created successfully  
 ![fig](img/fig27.png)  
 ![fig](img/fig28.png)  
-![fig](img/fig29.png)  
+![fig](img/fig29.png) 
+
+
+## Screen Recording
+[Youtube Link](https://www.youtube.com/embed/HDAOGJ32wGQ)
+
+## Standout Suggestions
+* The data was imbalanced and this leads a biased model that yields biased predictions. The imbalance issue would be handled as one or more of the following techniques
+1.) Upsampling Minority Class
+2.) Downsampling Majority Class
+3.) Generate Synthetic Data
+4.) Combine Oversampling and Undersampling Techniques
+5.) Balanced Class Weight
+
+* For better metrics, the deep learning would be enabled in AutoML experimentation, however, this will increase the computation time.
+
 
 
