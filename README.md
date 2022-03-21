@@ -13,7 +13,7 @@
     * [7. Create and publish a pipeline](#create-and-publish-a-pipeline)
     * [8. Documentation](#documentation)
 * [Screen Recording](#screen-recording)
-* [Future Improvements](#future-improvements)
+* [Standout Suggestions](#Standout-Suggestions)
 
 ## Overview
 This project is part of the Udacity Azure ML Nanodegree.
