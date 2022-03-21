@@ -87,10 +87,12 @@ Then, it's consumed and published the best model for the bank marketing dataset 
 
 **Note: There was a environment issue to save the best model, end no time left in the virtual environment to replicate the environment.**
 
-Finally, the pipeline runs and the endpoint is created successfully  
+The pipeline runs and the endpoint is created successfully  
 ![fig](img/fig27.png)  
 ![fig](img/fig28.png)  
 ![fig](img/fig29.png) 
+And finally, the REST endpoint in Azure ML Studio, with a status of ACTIVE.
+![fig](img/fig30.png) 
 
 
 ## Screen Recording with Subtitles
