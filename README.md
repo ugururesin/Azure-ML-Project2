@@ -17,7 +17,7 @@
 
 ## Overview
 This project is part of the Udacity Azure ML Nanodegree.
-In this project, The Azure service is used to configure a cloud-based machine learning production model with Bank Marketing dataset. Then the model is deployed and consumed. In addition, a pipeline is created, published, and consumed. These steps are documented in this README file and also a screen cast was recorded whose link is provided here.
+In this project, The Azure service is used to configure a cloud-based machine learning production model with Bank Marketing dataset. The model is created using AutoML (see figure-11). Then the model is deployed and consumed. In addition, a pipeline is created, published, and consumed. These steps are documented in this README file and also a screen cast was recorded whose link is provided here.
 
 ## The Architecture
 These are the steps we followed in this project :
@@ -32,71 +32,70 @@ These are the steps we followed in this project :
 6. **Consume model endpoints** : We interact with the endpoint using some test data to get inference.
 7. **Create and publish a pipeline** : In this step, we automate this workflow by creating a pipeline with the Python SDK.
 
-## Key Steps  
-First the dataset is loaded
-**Figure-01**  
+### Key Steps
+
+## Authentication
+The Azure lab is used provided by Udacity. Hence, the Authentication step is skipped since I am not authorized to create a security principal.
+
+## Automated ML Experiment
+**Figure-01: The bank-marketing dataset is loaded from a local source**  
 ![fig](img/fig01.png)  
-**Figure-02**  
+**Figure-02: The dataset is named**  
 ![fig](img/fig02.png)  
-**Figure-03**  
+**Figure-03: The columns and rows are checked**  
 ![fig](img/fig03.png)  
-**Figure-04**  
+**Figure-04: The data types are checked**  
 ![fig](img/fig04.png)  
-**Figure-05**  
+**Figure-05: Dataset seems OK**  
 ![fig](img/fig05.png)  
-**Figure-06**  
+**Figure-06: A compute cluster is created (DS3_V2 is preferred)**  
 ![fig](img/fig06.png)
-Then, a compute cluster is created  
-**Figure-07**  
+**Figure-07: The compute cluster is created (Details are given in the video)**  
 ![fig](img/fig07.png)  
-Using the dataset and the cluster, an AutoML experiment is setup  
-**Figure-08**  
+**Figure-08: Using the dataset and the cluster, an AutoML experiment is setup  **  
 ![fig](img/fig08.png)  
-The task is selected as classification since the target label is a categorical variable ('yes', 'no')  
-**Figure-09**  
+**Figure-09: The task is selected as classification since the target label is a categorical variable ('yes', 'no')  **  
 ![fig](img/fig09.png)  
-The metric is set to AUC and Training hour is limited with 1 hour 
-**Figure-10**  
+**Figure-10: The metric is set AUC to handle the imbalance dataset and Training hour is limited with 1 hour **  
 ![fig](img/fig10.png)  
-The AutoML is started train different ML models to find out the best fitting algorithm  
-**Figure-11**  
+**Figure-11: The AutoML is started train different ML models to find out the best fitting algorithm  **  
 ![fig](img/fig11.png)  
 The AutoML completed its run less than an hour
-**Figure-12**  
+**Figure-12: The AutoML completed its run less than an hour**  
 ![fig](img/fig12.png)  
-The best model metrics are 0.917 accuracy, 0.948 AUC_macro, 0.981 AUC_micro, 0.948 AUC_weighted  
-**Figure-13**  
+**Figure-13: The best model metrics are 0.917 accuracy, 0.948 AUC_macro, 0.981 AUC_micro, 0.948 AUC_weighted**  
 ![fig](img/fig13.png)  
 The precision-recall graph is shown below  
-**Figure-14**  
+**Figure-14: The precision-recall graph is shown below**  
 ![fig](img/fig14.png)  
 The ROC curve is shown below  
-**Figure-15**  
+**Figure-15: The ROC curve is shown below**  
 ![fig](img/fig15.png)  
-Then the model is deployed, the compute type is selected as ACI  
-**Figure-16**  
+
+
+## Deploy the best model
+To be able to interact with the best ML model, it needs to be deployed. Deployment can be  done in the Azure Machine Learning Studio, which provides us with an URL to send our test data to. The steps are given below.
+
+**Figure-16: The best model is deployed using a web-service to comsume. Here, Deploy function is used in Azure ML studio and the compute type is selected as ACI (Azure Container Instance)**  
 ![fig](img/fig16.png)  
-Then the applications insights are enabled using 'service.update(enable_app_insights=True' (line14)  
-**Figure-17**  
+
+### Enable logging
+
+**Figure-17: Then the applications insights are enabled using 'service.update(enable_app_insights=True' (line14)**  
 ![fig](img/fig17.png)  
 The model deployment is done succesfully  
-**Figure-18**  
+**Figure-18: The model deployment is done succesfully**  
 ![fig](img/fig18.png)
-Then the logs.py is run  
-**Figure-19**  
+**Figure-19: Then the logs.py is run in order to enable to application insights**  
 ![fig](img/fig19.png)  
-The swagger.json file is downloaded and imported to the working directory  
-**Figure-20**  
+**Figure-20: In the endpoints section, the swagger.json file is downloaded and imported to the working directory**  
 ![fig](img/fig20.png)
-Using Git Bash, the swagger.sh and the serve.py files are triggered respectively  
-**Figure-21**  
-![fig](img/fig21.png)  
-Then the deployed model is accessed via swagger using localhost:8000/swagger.json adress
-**Figure-22**  
+**Figure-21: Using Git Bash, the swagger.sh and the serve.py files are triggered respectively. The serve.py is not changed but the local host is changed in the swagger.sh to prevent overlap**
+![fig](img/fig21.png) 
+**Figure-22: Then the deployed model is accessed via swagger using localhost:8000/swagger.json adress**  
 ![fig](img/fig22.png)  
-**Figure-23**  
+**Figure-23: Endpoint is consumed using the REST endpoint and the primary key  **  
 ![fig](img/fig23.png)  
-Endpoint is consumed using the REST endpoint and the primary key  
 **Figure-24**  
 ![fig](img/fig24.png)  
 
