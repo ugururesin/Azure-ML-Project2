@@ -13,7 +13,7 @@
     * [7. Create and publish a pipeline](#create-and-publish-a-pipeline)
     * [8. Documentation](#documentation)
 * [Screen Recording](#Screen-Recording-with-Subtitles)
-* [Standout Suggestions](#Standout-Suggestions)
+* [Future Improvement Suggestions](#future-improvement-suggestions)
 
 ## Overview
 This project is part of the Udacity Azure ML Nanodegree.
@@ -145,7 +145,7 @@ The pipeline runs and the endpoint is created successfully
 
 **P.S.** Due to the 5 minutes time limit, I accidentally skipped the endpoint consumption step in the video but can be seen in the figure25. Creating a new video is extremely time consuming and it can easily be seen in the figure 25!  
 
-## Standout Suggestions
+## Future Improvement Suggestions
 * The data was imbalanced and this leads a biased model that yields biased predictions. The imbalance issue would be handled as one or more of the following techniques  
 1.) Upsampling Minority Class  
 2.) Downsampling Majority Class  
