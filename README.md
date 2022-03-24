@@ -80,6 +80,7 @@ To be able to interact with the best ML model, it needs to be deployed. Deployme
 ![fig](img/fig16.png)  
 
 ### Enable logging
+See the figure 17-18-19 below with their explanations:  
 
 **Figure-17: Then the applications insights are enabled using 'service.update(enable_app_insights=True' (line14)**  
 ![fig](img/fig17.png)  
@@ -87,16 +88,29 @@ The model deployment is done succesfully
 **Figure-18: The model deployment is done succesfully**  
 ![fig](img/fig18.png)
 **Figure-19: Then the logs.py is run in order to enable to application insights**  
-![fig](img/fig19.png)  
+![fig](img/fig19.png) 
+
+## Swagger Documentation
+To consume the best AutoML model using Swagger, first the swagger.json file is downloaded (see Figure.20) from the Endpoints section in Azure Machine Learning Studio.
+
 **Figure-20: In the endpoints section, the swagger.json file is downloaded and imported to the working directory**  
 ![fig](img/fig20.png)
+
+Putting the swagger.json file in the active directory the swagger.sh and serve.py files are triggered in order to interact with the swagger instance running with the documentation for the HTTP API of the model.
+
 **Figure-21: Using Git Bash, the swagger.sh and the serve.py files are triggered respectively. The serve.py is not changed but the local host is changed in the swagger.sh to prevent overlap**
 ![fig](img/fig21.png) 
 **Figure-22: Then the deployed model is accessed via swagger using localhost:8000/swagger.json adress**  
 ![fig](img/fig22.png)  
-**Figure-23: Endpoint is consumed using the REST endpoint and the primary key**  
+**Figure-23: The input for the score POST method that returns the prediction of the deployed ML model.**  
 ![fig](img/fig23.png)  
-**Figure-24**  
+
+## Consume model endpoints
+At this point, the interaction with model is tested by sending a test data (see the left screen in the figure 25).
+
+To do that, the script is modified (default script has an issue) by getting the consumption script (see Figure 24).  
+
+**Figure-24: The consumption options provided by Azure ML Studio (here Python is used)**  
 ![fig](img/fig24.png)  
 
 **endpoint.py script runs against the API producing JSON output from the model.**  
@@ -104,29 +118,30 @@ The default script did not work, I changed it based on AzureML code snipsets.
 **Figure-25**  
 ![fig](img/fig25.png)  
 
+## Create and publish a pipeline
 As a second part of this project, the aml-pipelines-with-automated-machine-learning-step Jupyter Notebook is used to create a Pipeline.  
 Then, it's consumed and published the best model for the bank marketing dataset using AutoML with Python SDK.  
-**Figure-26**  
+**Figure-26: Create a Pipeline in the SDK**  
 ![fig](img/fig26.png)  
 
 **Note: There was a environment issue to save the best model, end no time left in the virtual environment to replicate the environment again but met the rubric requirements**
 
 The pipeline runs and the endpoint is created successfully  
-**Figure-27**  
+**Figure-27: Create a Pipeline in the SDK**  
 ![fig](img/fig27.png)  
-**Figure-28**  
+**Figure-28: Pipeline in Azure Studio**  
 ![fig](img/fig28.png)  
-**Figure-29**  
+
+**Figure-29: Create the REST endpoint with a stautus of ACTIVE.**  
 ![fig](img/fig29.png) 
-And finally, the REST endpoint in Azure ML Studio, with a status of ACTIVE.
-**Figure-30**  
+**Figure-30: The REST endpoint is achieved in Azure ML Studio, with a status of ACTIVE.**  
 ![fig](img/fig30.png) 
 
 
 ## Screen Recording with Subtitles
 [Youtube Link](https://www.youtube.com/watch?v=5iA5eBRqGTU)
 
-**P.S.** Due to the 5 minutes time limit, I accidentally skipped the endpoint consumption step in the video but can be seen in the figure25.
+**P.S.** Due to the 5 minutes time limit, I accidentally skipped the endpoint consumption step in the video but can be seen in the figure25. Creating a new video is extremely time consuming and it can easily be seen in the figure 25!  
 
 ## Standout Suggestions
 * The data was imbalanced and this leads a biased model that yields biased predictions. The imbalance issue would be handled as one or more of the following techniques  
