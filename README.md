@@ -52,13 +52,13 @@ The Azure lab is used provided by Udacity. Hence, the Authentication step is ski
 ![fig](img/fig06.png)
 **Figure-07: The compute cluster is created (Details are given in the video)**  
 ![fig](img/fig07.png)  
-**Figure-08: Using the dataset and the cluster, an AutoML experiment is setup  **  
+**Figure-08: Using the dataset and the cluster, an AutoML experiment is setup**  
 ![fig](img/fig08.png)  
-**Figure-09: The task is selected as classification since the target label is a categorical variable ('yes', 'no')  **  
+**Figure-09: The task is selected as classification since the target label is a categorical variable ('yes', 'no')**  
 ![fig](img/fig09.png)  
-**Figure-10: The metric is set AUC to handle the imbalance dataset and Training hour is limited with 1 hour **  
+**Figure-10: The metric is set AUC to handle the imbalance dataset and Training hour is limited with 1 hour**  
 ![fig](img/fig10.png)  
-**Figure-11: The AutoML is started train different ML models to find out the best fitting algorithm  **  
+**Figure-11: The AutoML is started train different ML models to find out the best fitting algorithm**  
 ![fig](img/fig11.png)  
 The AutoML completed its run less than an hour
 **Figure-12: The AutoML completed its run less than an hour**  
@@ -74,7 +74,7 @@ The ROC curve is shown below
 
 
 ## Deploy the best model
-To be able to interact with the best ML model, it needs to be deployed. Deployment can be  done in the Azure Machine Learning Studio, which provides us with an URL to send our test data to. The steps are given below.
+To be able to interact with the best ML model, it needs to be deployed. Deployment can be done in the Azure Machine Learning Studio, which provides us with an URL to send our test data to. The steps are given below.
 
 **Figure-16: The best model is deployed using a web-service to comsume. Here, Deploy function is used in Azure ML studio and the compute type is selected as ACI (Azure Container Instance)**  
 ![fig](img/fig16.png)  
@@ -94,7 +94,7 @@ The model deployment is done succesfully
 ![fig](img/fig21.png) 
 **Figure-22: Then the deployed model is accessed via swagger using localhost:8000/swagger.json adress**  
 ![fig](img/fig22.png)  
-**Figure-23: Endpoint is consumed using the REST endpoint and the primary key  **  
+**Figure-23: Endpoint is consumed using the REST endpoint and the primary key**  
 ![fig](img/fig23.png)  
 **Figure-24**  
 ![fig](img/fig24.png)  
