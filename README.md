@@ -141,7 +141,7 @@ The pipeline runs and the endpoint is created successfully
 
 
 ## Screen Recording with Subtitles
-Every step in the project is reflected to the fast-track video with an Audio as given below:
+Every step in the project is reflected to the fast-track video with an Audio as given below:  
 [Youtube Link](https://www.youtube.com/watch?v=LqhBfw5kl9M)
 
 ## Future Improvement Suggestions
