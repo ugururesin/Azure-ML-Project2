@@ -141,9 +141,8 @@ The pipeline runs and the endpoint is created successfully
 
 
 ## Screen Recording with Subtitles
-[Youtube Link](https://www.youtube.com/watch?v=5iA5eBRqGTU)
-
-**P.S.** Due to the 5 minutes time limit, I accidentally skipped the endpoint consumption step in the video but can be seen in the figure25. Creating a new video is extremely time consuming and it can easily be seen in the figure 25!  
+Every step in the project is reflected to the fast-track video with an Audio as given below:
+[Youtube Link](https://www.youtube.com/watch?v=LqhBfw5kl9M)
 
 ## Future Improvement Suggestions
 * The data was imbalanced and this leads a biased model that yields biased predictions. The imbalance issue would be handled as one or more of the following techniques  
