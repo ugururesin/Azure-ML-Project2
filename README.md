@@ -12,7 +12,7 @@
     * [6. Consume model endpoints](#consume-model-endpoints)
     * [7. Create and publish a pipeline](#create-and-publish-a-pipeline)
     * [8. Documentation](#documentation)
-* [Screen Recording](#Screen-Recording-with-Subtitles)
+* [Screen Recording](#Screen-Recording)
 * [Future Improvement Suggestions](#future-improvement-suggestions)
 
 ## Overview
@@ -140,7 +140,7 @@ The pipeline runs and the endpoint is created successfully
 ![fig](img/fig30.png) 
 
 
-## Screen Recording with Subtitles
+## Screen Recording
 Every step in the project is reflected to the fast-track video with an Audio as given below:  
 [Youtube Link](https://www.youtube.com/watch?v=LqhBfw5kl9M)
 
